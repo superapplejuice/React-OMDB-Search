@@ -2,7 +2,7 @@
 
 This time, my second app is a Movie Search app using the [OMDB Api](http://www.omdbapi.com/). The challenge here was to remove dependency on Redux and use entirely Hooks. Building the app took me a while to get started as I had no concept to reference. But it became fun afterwards once I _somehow_ had a concept in my head. This [nifty tutorial](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e) made things much more fun when I realized I can actually write custom Hooks...
 
-I'm still using the [Semantic UI](https://semantic-ui.com/) library as I still to brush up `CSS` skills just yet.
+I'm still using the [Semantic UI](https://semantic-ui.com/) library as I still have yet to brush up `CSS` skills.
 
 As always, code reviews are greatly appreciated!
 
