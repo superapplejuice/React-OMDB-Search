@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useFetch from '../hooks/useFetch';
+import randValue from '../config/randomTerm';
 
 import Search from './Search';
 import MovieList from './movies/MovieList';
@@ -8,7 +9,7 @@ import ErrorMessage from './placeholders/ErrorMessage';
 
 const App = () => {
 	const url = `http://www.omdbapi.com/?apikey=98b07407&type=movie&s=`;
-	const [term, setTerm] = useState('batman');
+	const [term, setTerm] = useState(randValue);
 	const [movies, loading, errorMessage] = useFetch(url, term);
 
 	const searchTerm = searchValue => {
