@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 const useFetch = Title => {
 	const [movie, setMovie] = useState({});
 	const encodedTitle = encodeURIComponent(Title);
-	console.log(encodedTitle);
 
 	useEffect(() => {
 		const fetchMovies = () => {

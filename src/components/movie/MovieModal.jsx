@@ -5,9 +5,8 @@ import useModal from '../../hooks/useModal';
 const MovieModal = ({ Title, handleDismiss }) => {
 	const ModalElement = document.querySelector('#modal');
 	const [movie] = useModal(Title);
-	console.log(Title);
 
-	const modalElements = () => {
+	const renderModal = () => {
 		const {
 			Actors,
 			Director,
@@ -20,39 +19,51 @@ const MovieModal = ({ Title, handleDismiss }) => {
 			imdbRating
 		} = movie;
 
+		const loader = () => {
+			return <div className="ui active text loader">Loading</div>;
+		};
+
+		const modalElements = () => {
+			return (
+				<>
+					<div
+						className="ui standard modal visible active"
+						onClick={event => event.stopPropagation()}
+					>
+						<div className="header">{Title}</div>
+						<div className="image content">
+							<div className="ui medium image">
+								<img src={Poster} alt="movie poster" />
+								<br />
+							</div>
+							<div className="description">
+								<h3>{Actors}</h3>
+								<p>Directed by {Director}</p>
+								<br />
+								<p>{Plot}</p>
+								<br />
+								<div>Released: {Released}</div>
+								<div>Runtime: {Runtime}</div>
+								<div>Rating: {Rated}</div>
+								<div>IMDB Rating: {imdbRating}</div>
+							</div>
+						</div>
+					</div>
+				</>
+			);
+		};
+
 		return (
 			<div
 				className="ui page modals dimmer visible active"
 				onClick={handleDismiss}
 			>
-				<div
-					className="ui standard modal visible active"
-					onClick={event => event.stopPropagation()}
-				>
-					<div className="header">{Title}</div>
-					<div className="image content">
-						<div className="ui medium image">
-							<img src={Poster} alt="movie poster" />
-							<br />
-						</div>
-						<div className="description">
-							<h3>{Actors}</h3>
-							<p>Directed by {Director}</p>
-							<br />
-							<p>{Plot}</p>
-							<br />
-							<div>Released: {Released}</div>
-							<div>Runtime: {Runtime}</div>
-							<div>Rating: {Rated}</div>
-							<div>IMDB Rating: {imdbRating}</div>
-						</div>
-					</div>
-				</div>
+				{!Poster ? loader() : modalElements()}
 			</div>
 		);
 	};
 
-	return createPortal(modalElements(), ModalElement);
+	return createPortal(renderModal(), ModalElement);
 };
 
 export default MovieModal;
