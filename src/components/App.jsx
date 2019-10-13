@@ -11,7 +11,7 @@ import Navbar from './Navbar';
 import '../styles/App.css';
 
 const App = () => {
-	const url = `http://www.omdbapi.com/?apikey=98b07407&type=movie&s=`;
+	const url = 'https://www.omdbapi.com/?apikey=98b07407&type=movie&s=';
 	const [term, setTerm] = useState(randValue);
 	const [movies, loading, errorMessage] = useFetch(url, term);
 
