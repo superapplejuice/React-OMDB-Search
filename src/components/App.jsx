@@ -17,9 +17,9 @@ const App = () => {
 	};
 
 	const renderMovieList = () => {
-		if (!loading && !errorMessage) {
+		if (!loading && !errorMessage && movies) {
 			return <MovieList movies={movies} />;
-		} else if (!loading && errorMessage) {
+		} else if (!loading && errorMessage && !movies) {
 			return <ErrorMessage errorMessage={errorMessage} />;
 		}
 		return <Loader />;
