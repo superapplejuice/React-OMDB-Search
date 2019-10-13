@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/React-OMDB-Search/static/css/main.24ed6ba7.chunk.css",
+    "main.js": "/React-OMDB-Search/static/js/main.f66eb172.chunk.js",
+    "main.js.map": "/React-OMDB-Search/static/js/main.f66eb172.chunk.js.map",
+    "runtime-main.js": "/React-OMDB-Search/static/js/runtime-main.8a669c2a.js",
+    "runtime-main.js.map": "/React-OMDB-Search/static/js/runtime-main.8a669c2a.js.map",
+    "static/js/2.2bb49090.chunk.js": "/React-OMDB-Search/static/js/2.2bb49090.chunk.js",
+    "static/js/2.2bb49090.chunk.js.map": "/React-OMDB-Search/static/js/2.2bb49090.chunk.js.map",
+    "index.html": "/React-OMDB-Search/index.html",
+    "precache-manifest.c46d5a132449e0fe8960b06d7764f920.js": "/React-OMDB-Search/precache-manifest.c46d5a132449e0fe8960b06d7764f920.js",
+    "service-worker.js": "/React-OMDB-Search/service-worker.js",
+    "static/css/main.24ed6ba7.chunk.css.map": "/React-OMDB-Search/static/css/main.24ed6ba7.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a669c2a.js",
+    "static/js/2.2bb49090.chunk.js",
+    "static/css/main.24ed6ba7.chunk.css",
+    "static/js/main.f66eb172.chunk.js"
+  ]
+}
