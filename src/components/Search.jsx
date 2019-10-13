@@ -12,6 +12,8 @@ const Search = props => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		props.searchTerm(term);
+		setTerm('');
+		inputRef.current.focus();
 	};
 
 	const renderComponent = () => {
