@@ -5,7 +5,7 @@ This time, my second app is a Movie Search app using the [OMDB Api](http://www.o
 I'm still using the [Semantic UI](https://semantic-ui.com/) library as I have yet to brush up `CSS` skills.
 
 As always, code reviews are greatly appreciated!
-You can view this project [right here](http://superapplejuice.github.io/React-OMDB-Search)!
+You can view this project [right here](https://superapplejuice.github.io/React-OMDB-Search)!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

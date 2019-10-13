@@ -2,7 +2,7 @@
 	"name": "movies",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://superapplejuice.github.io/React-OMDB-Search",
+	"homepage": "https://superapplejuice.github.io/React-OMDB-Search",
 	"dependencies": {
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
