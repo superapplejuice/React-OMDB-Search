@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch';
 import randValue from '../config/randomTerm';
 
 import Search from './Search';
-import MovieList from './movies/MovieList';
+import MovieList from './movie/MovieList';
 import Loader from './placeholders/Loader';
 import ErrorMessage from './placeholders/ErrorMessage';
 

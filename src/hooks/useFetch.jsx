@@ -4,10 +4,11 @@ const useFetch = (url, term) => {
 	const [movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [errorMessage, setErrorMessage] = useState(null);
+	const encodedTerm = encodeURIComponent(term);
 
 	useEffect(() => {
 		const fetchMovies = () => {
-			fetch(`${url}${term}`)
+			fetch(`${url}${encodedTerm}`)
 				.then(res => res.json())
 				.then(jsonRes => {
 					if (jsonRes.Response === 'True') {
@@ -20,7 +21,7 @@ const useFetch = (url, term) => {
 		};
 		fetchMovies();
 		// eslint-disable-next-line
-	}, [term]);
+	}, [encodedTerm]);
 
 	return [movies, loading, errorMessage];
 };
