@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import useModal from '../../hooks/useModal';
 
@@ -25,7 +25,7 @@ const MovieModal = ({ Title, handleDismiss }) => {
 
 		const modalElements = () => {
 			return (
-				<>
+				<Fragment>
 					<div
 						className="ui standard modal visible active"
 						onClick={event => event.stopPropagation()}
@@ -49,7 +49,7 @@ const MovieModal = ({ Title, handleDismiss }) => {
 							</div>
 						</div>
 					</div>
-				</>
+				</Fragment>
 			);
 		};
 

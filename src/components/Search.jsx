@@ -33,7 +33,7 @@ const Search = props => {
 		);
 	};
 
-	return <>{renderComponent()}</>;
+	return <div>{renderComponent()}</div>;
 };
 
 export default Search;

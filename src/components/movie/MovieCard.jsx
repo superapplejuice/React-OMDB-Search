@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import MovieModal from './MovieModal';
 
 const MovieCard = ({ movie }) => {
@@ -8,21 +8,25 @@ const MovieCard = ({ movie }) => {
 	const renderMovieCard = () => {
 		const movieNotLoaded = () => {
 			return (
-				<div className="ui placeholder">
+				<Fragment>
 					<div className="image">
-						<img src="" alt="movie has no poster!" />
+						<div className="ui placeholder">
+							<img src="" alt="movie has no poster!" />
+						</div>
 					</div>
 					<div className="content">
-						<div className="header"></div>
-						<div className="meta"></div>
+						<div className="ui placeholder">
+							<div className="header">Loading...</div>
+							<div className="meta">Loading...</div>
+						</div>
 					</div>
-				</div>
+				</Fragment>
 			);
 		};
 
 		const movieLoaded = () => {
 			return (
-				<>
+				<Fragment>
 					<div className="image">
 						<img src={Poster} alt="movie has no poster!" />
 					</div>
@@ -30,7 +34,7 @@ const MovieCard = ({ movie }) => {
 						<div className="header">{Title}</div>
 						<div className="meta">{Year}</div>
 					</div>
-				</>
+				</Fragment>
 			);
 		};
 
@@ -46,10 +50,10 @@ const MovieCard = ({ movie }) => {
 	};
 
 	return (
-		<>
+		<Fragment>
 			{show && <MovieModal Title={Title} handleDismiss={handleDismiss} />}
 			{renderMovieCard()}
-		</>
+		</Fragment>
 	);
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import useFetch from '../hooks/useFetch';
 import randValue from '../config/randomTerm';
 
@@ -6,6 +6,9 @@ import Search from './Search';
 import MovieList from './movie/MovieList';
 import Loader from './placeholders/Loader';
 import ErrorMessage from './placeholders/ErrorMessage';
+import Navbar from './Navbar';
+
+import '../styles/App.css';
 
 const App = () => {
 	const url = `http://www.omdbapi.com/?apikey=98b07407&type=movie&s=`;
@@ -27,14 +30,17 @@ const App = () => {
 
 	const renderComponents = () => {
 		return (
-			<div className="ui container">
-				<Search searchTerm={searchTerm} />
-				{renderMovieList()}
-			</div>
+			<Fragment>
+				<Navbar />
+				<div className="main-container ui container">
+					<Search searchTerm={searchTerm} />
+					{renderMovieList()}
+				</div>
+			</Fragment>
 		);
 	};
 
-	return <>{renderComponents()}</>;
+	return <Fragment>{renderComponents()}</Fragment>;
 };
 
 export default App;
